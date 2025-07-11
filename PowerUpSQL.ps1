@@ -16392,10 +16392,8 @@ Function  Get-SQLInstanceDomain
         {
             Write-Verbose -Message 'Parsing SQL Server instances from the UDP scan...'
             $Tbl1 = $TblMgmtSQLServers |
-            Select-Object -Property ComputerName, Instance |
             Sort-Object -Property ComputerName, Instance
             $Tbl2 = $TblSQLServerSpns |
-            Select-Object -Property ComputerName, Instance |
             Sort-Object -Property ComputerName, Instance
             $Tbl3 = $Tbl1 + $Tbl2
 
